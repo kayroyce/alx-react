@@ -11,15 +11,21 @@ module.exports = {
 		rules: [
 			{ 
 				test: /\.css$/i, 
-				use: ['raw-loader', 'style-loader'], },
+				use: ['raw-loader', 'style-loader'], 
+			},
 			{ 
 				test: /\.(gif|png|jpe?g|svg)$/i, 
 				use: [
 					'file-loader', 
 					{
 						loader: 'image-webpack-loader',
-						options: {bypassingOnDebug: true, disable: true,},
-					}]
+						options: 
+						{
+							bypassingOnDebug: true, 
+							disable: true,
+						},
+					},
+				],
 			},
 		],
 	},
